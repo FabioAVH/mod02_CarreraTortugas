@@ -38,11 +38,14 @@ class Circuito():
         
         while not hayGanador:
             for tortuga in self.corredores:
-                tortuga.forward(random.randint(1,6))
+                tortuga.forward(random.randint(1,10))
                 if tortuga.position()[0] >= self.__finishLine:
                     hayGanador = True
-                    print('La tortuga {} ha ganado!!!'.format(tortuga.color()[0]))    
+                    print('La tortuga {} ha ganado!!!'.format(tortuga.color()[0]))
+                    break
 
+
+#Main
 if __name__ == '__main__':
     circuito = Circuito(640,480)
     circuito.Correr()
